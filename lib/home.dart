@@ -14,7 +14,16 @@ class Home extends StatelessWidget {
         width: 200,
       ),
       const SizedBox(height: 10),
-      OutlinedButton(
+      const Text(
+        "Learn by solving",
+        style: TextStyle(
+          fontWeight: FontWeight.w500,
+          fontSize: 18,
+          color: Colors.white,
+        ),
+      ),
+      const SizedBox(height: 10),
+      OutlinedButton( //todo
         onPressed: () {},
         child: const Text(
           "Click to begin",
