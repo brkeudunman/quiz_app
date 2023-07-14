@@ -23,12 +23,12 @@ class Home extends StatelessWidget {
         ),
       ),
       const SizedBox(height: 10),
-      OutlinedButton( //todo
+      OutlinedButton.icon( //todo
         onPressed: () {},
-        child: const Text(
+        label: const Text(
           "Click to begin",
           style: TextStyle(color: Colors.white70),
-        ),
+        ), icon: const Icon(Icons.arrow_forward_ios),
       )
     ], colors: [
       Colors.deepPurple.shade300,
