@@ -1,39 +1,43 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:quiz_app/containers/gradient_container.dart';
 
 class Home extends StatelessWidget {
-  const Home({super.key});
+  final void Function() startQuiz;
+
+  const Home(this.startQuiz, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GradientContainer(childrenWidgets: [
-      Image.asset(
-        'assets/images/quiz-logo.png',
-        width: 200,
-      ),
-      const SizedBox(height: 10),
-      const Text(
-        "Learn by solving",
-        style: TextStyle(
-          fontWeight: FontWeight.w500,
-          fontSize: 18,
-          color: Colors.white,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      // <-- alignments
+      children: [
+        Image.asset(
+          'assets/images/quiz-logo.png',
+          width: 200,
+          color: const Color.fromARGB(142, 255, 255, 255),
         ),
-      ),
-      const SizedBox(height: 10),
-      OutlinedButton.icon( //todo
-        onPressed: () {},
-        label: const Text(
-          "Click to begin",
-          style: TextStyle(color: Colors.white70),
-        ), icon: const Icon(Icons.arrow_forward_ios),
-      )
-    ], colors: [
-      Colors.deepPurple.shade300,
-      Colors.deepPurple.shade400,
-      Colors.deepPurple.shade500,
-    ]);
+        const SizedBox(height: 10),
+        const Text(
+          "Learn by solving",
+          style: TextStyle(
+            fontWeight: FontWeight.w500,
+            fontSize: 18,
+            color: Colors.white,
+          ),
+        ),
+        const SizedBox(height: 10),
+        OutlinedButton.icon(
+          //todo
+          onPressed: () {
+            startQuiz();
+          },
+          label: const Text(
+            "Click to begin",
+            style: TextStyle(fontSize: 16, color: Colors.white),
+          ),
+          icon: const Icon(Icons.arrow_forward, color: Colors.white),
+        )
+      ],
+    );
   }
 }

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class GradientContainer extends StatelessWidget {
-  final List<Widget> childrenWidgets;
+  final Widget? child;
   final List<Color> colors;
 
   const GradientContainer(
-      {super.key, required this.childrenWidgets, required this.colors});
+      {super.key, required this.child, required this.colors});
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +17,9 @@ class GradientContainer extends StatelessWidget {
             colors: colors),
       ),
       child: Center(
-          heightFactor: 5,
-          child: SizedBox(
-            height: 350,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              // <-- alignments
-              children: childrenWidgets,
-            ),
-          )),
+        heightFactor: 5,
+        child: SizedBox(height: 350, child: child),
+      ),
     );
   }
 }
