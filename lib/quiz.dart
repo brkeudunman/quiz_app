@@ -13,24 +13,24 @@ class Quiz extends StatefulWidget {
 }
 
 class _Quiz extends State<Quiz> {
-  Widget? activeWidget;
-
-  @override
-  void initState() {
-    activeWidget = Home(switchWidget);
-    super.initState();
-  }
+  var activeWidget = "start-screen";
 
   void switchWidget() {
     setState(() {
-      activeWidget = const Questions();
+      activeWidget = "questions-screen";
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return GradientContainer(
-        colors: [Colors.deepPurple.shade400, Colors.deepPurple.shade500],
-        child: activeWidget);
+    Widget screenWidget = Home(switchWidget);
+    if (activeWidget == "questions-screen") {
+      screenWidget = const Questions();
+    }
+    return GradientContainer(colors: [
+      Colors.deepPurple.shade400,
+      Colors.deepPurple.shade500,
+      Colors.deepPurple.shade600
+    ], child: screenWidget);
   }
 }
