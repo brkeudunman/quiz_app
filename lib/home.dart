@@ -27,7 +27,6 @@ class Home extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         OutlinedButton.icon(
-          //todo
           onPressed: () {
             startQuiz();
           },
