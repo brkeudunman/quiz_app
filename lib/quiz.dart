@@ -3,6 +3,7 @@ import 'package:quiz_app/containers/gradient_container.dart';
 import 'package:quiz_app/home.dart';
 import 'package:quiz_app/questions.dart';
 import 'package:quiz_app/data/questions.dart';
+import 'package:quiz_app/results.dart';
 
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
@@ -19,18 +20,17 @@ class _Quiz extends State<Quiz> {
 
   void switchWidget() {
     setState(() {
+      selectedAnswers = [];
       activeWidget = "questions-screen";
     });
   }
 
   void chooseAnswer(String answer) {
     selectedAnswers.add(answer);
-
     if (selectedAnswers.length == questions.length) {
       setState(
         () {
-          selectedAnswers = [];
-          activeWidget = "start-screen";
+          activeWidget = "end-screen";
         },
       );
     }
@@ -41,6 +41,8 @@ class _Quiz extends State<Quiz> {
     Widget screenWidget = Home(switchWidget);
     if (activeWidget == "questions-screen") {
       screenWidget = Questions(onSelectAnswer: chooseAnswer);
+    } else if (activeWidget == "end-screen") {
+      screenWidget = Result(answers: selectedAnswers, switchWidget: switchWidget);
     }
     return GradientContainer(colors: [
       Colors.deepPurple.shade400,

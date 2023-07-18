@@ -49,10 +49,11 @@ class _Questions extends State<Questions> {
           ),
           ...currentQuestion.getShuffledAnswers().map((answer) {
             return QuestionButton(
-                answerText: answer,
-                onTap: () {
-                  answerQuestion(answer);
-                });
+              answerText: answer,
+              onTap: () {
+                answerQuestion(answer);
+              },
+            );
           })
         ],
       ),
