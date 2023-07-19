@@ -8,6 +8,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       // <-- alignments
       children: [
@@ -16,12 +17,12 @@ class Home extends StatelessWidget {
           width: 200,
           color: const Color.fromARGB(142, 255, 255, 255),
         ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 30),
         const Text(
-          "Learn by solving",
+          "Teach me if you can!",
           style: TextStyle(
             fontWeight: FontWeight.w500,
-            fontSize: 18,
+            fontSize: 20,
             color: Colors.white,
           ),
         ),

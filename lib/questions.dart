@@ -37,7 +37,7 @@ class _Questions extends State<Questions> {
         children: [
           Text(
             textAlign: TextAlign.center,
-            "${currentQuestion.text} + ",
+            "${(currentQuestionIndex) +1 } - ${currentQuestion.text}",
             style: GoogleFonts.lato(
               color: Colors.white,
               fontSize: 24,

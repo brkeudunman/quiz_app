@@ -18,7 +18,7 @@ class GradientContainer extends StatelessWidget {
       ),
       child: Center(
         heightFactor: 5,
-        child: SizedBox(height: 350, child: child),
+        child: Container(child: child),
       ),
     );
   }

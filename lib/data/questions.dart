@@ -2,54 +2,93 @@ import 'package:quiz_app/models/quiz_question.dart';
 
 const questions = [
   QuizQuestion(
-    'What are the main building blocks of Flutter UIs?',
+    'What is the world\'s largest ocean?',
     [
-      'Widgets',
-      'Components',
-      'Blocks',
-      'Functions',
-    ],
-  ),
-  QuizQuestion('How are Flutter UIs built?', [
-    'By combining widgets in code',
-    'By combining widgets in a visual editor',
-    'By defining widgets in config files',
-    'By using XCode for iOS and Android Studio for Android',
-  ]),
-  QuizQuestion(
-    'What\'s the purpose of a StatefulWidget?',
-    [
-      'Update UI as data changes',
-      'Update data as UI changes',
-      'Ignore data changes',
-      'Render UI that does not depend on data',
+      'Pacific Ocean',
+      'Atlantic Ocean',
+      'Indian Ocean',
+      'Arctic Ocean',
     ],
   ),
   QuizQuestion(
-    'Which widget should you try to use more often: StatelessWidget or StatefulWidget?',
+    'In which year did World War I end?',
     [
-      'StatelessWidget',
-      'StatefulWidget',
-      'Both are equally good',
-      'None of the above',
+      '1918',
+      '1914',
+      '1945',
+      '1939',
     ],
   ),
   QuizQuestion(
-    'What happens if you change data in a StatelessWidget?',
+    'Who is the author of the novel "1984"?',
     [
-      'The UI is not updated',
-      'The UI is updated',
-      'The closest StatefulWidget is updated',
-      'Any nested StatefulWidgets are updated',
+      'George Orwell',
+      'Aldous Huxley',
+      'Ray Bradbury',
+      'J.R.R. Tolkien',
     ],
   ),
   QuizQuestion(
-    'How should you update data inside of StatefulWidgets?',
+    'What is the chemical formula for water?',
     [
-      'By calling setState()',
-      'By calling updateData()',
-      'By calling updateUI()',
-      'By calling updateState()',
+      'H2O',
+      'CO2',
+      'NaCl',
+      'CH4',
+    ],
+  ),
+  QuizQuestion(
+    'Which composer wrote the Symphony No. 5 in C minor?',
+    [
+      'Ludwig van Beethoven',
+      'Wolfgang Amadeus Mozart',
+      'Johann Sebastian Bach',
+      'Franz Schubert',
+    ],
+  ),
+  QuizQuestion(
+    'Which scientist developed the theory of general relativity?',
+    [
+      'Albert Einstein',
+      'Isaac Newton',
+      'Niels Bohr',
+      'Marie Curie',
+    ],
+  ),
+  QuizQuestion(
+    'In which country would you find the ancient ruins of Machu Picchu?',
+    [
+      'Peru',
+      'Mexico',
+      'Brazil',
+      'Chile',
+    ],
+  ),
+  QuizQuestion(
+    'Who painted the famous artwork "The Starry Night"?',
+    [
+      'Vincent van Gogh',
+      'Pablo Picasso',
+      'Salvador Dalí',
+      'Claude Monet',
+    ],
+  ),
+  QuizQuestion(
+    'Which scientist proposed the theory of evolution by natural selection?',
+    [
+      'Charles Darwin',
+      'Gregor Mendel',
+      'Louis Pasteur',
+      'Sigmund Freud',
+    ],
+  ),
+  QuizQuestion(
+    'What is the longest river in Africa?',
+    [
+      'Nile River',
+      'Congo River',
+      'Niger River',
+      'Zambezi River',
     ],
   ),
 ];
